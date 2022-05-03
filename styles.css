@@ -1,17 +1,61 @@
 body {
+  /*margin properties are used to create space around
+  elements, outside of any defined borders*/
+
+  /*Margin is the shorthand property & can have
+  values : px px px px (top, right, bottom, left)*/
+
+  /*If the margin property has one value:
+All four margins are the value! */
   margin: 0;
+
+  /*Padding is used to create space around an element's
+  content, inside of any defined borders.*/
+  /*works similar to margin^^*/
+
+  /*All four paddings have a value of 0*/
   padding: 0;
-  background: #14495e;
+
+  /*background color of the body*/
+  background: #145E47FF;
 }
 
 .eyes {
+  /*-The position property specifies the type of positioning
+  Values: (static, relative, fixed [positioned relative to the viewport]
+  , absolute, or sticky).*/
+
+  /*The absolute value is positioned relative to the nearest
+positioned ancestor */
   position: absolute;
+
+  /*-The top property affects the vertical position of a positioned element*/
+  /*-If position: absolute; or position: fixed; - the top property sets the
+  top edge of an element to a unit above/below the top edge of its nearest
+   positioned ancestor.*/
+
+  /*top property have a value of 50 for an element with no positioned ancestors*/
   top: 50%;
+
+  /*-The transform property applies a 2D or 3D transformation to an element.
+  This property allows you to rotate, scale, move, skew, etc., elements.*/
+  /*-Defines a translation, using only the value for the Y-axis*/
+
+  /*transform property has a value of -50*/
   transform: translateY(-50%);
+  /*The width property sets the width of an element.
+
+The width of an element
+does NOT include padding, borders, or margins!*/
+  /*	Width is defined in percent of the containing block*/
   width: 100%;
+
+  /*The text-align property specifies the horizontal alignment
+  of text in an element.*/
   text-align: center;
 }
-.eye {
+
+div.eye {
   width: 240px;
   height: 120px;
   background: #fff;
@@ -19,9 +63,13 @@ body {
   margin: 40px;
   border-radius: 50%;
   position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   overflow: hidden;
 }
-.ball {
+
+div.ball {
   width: 80px;
   height: 80px;
   background: #000;
@@ -29,5 +77,10 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  /*The border-radius property defines the radius of the
+  element's corners.*/
+
+  /*Tip: This property allows you to add rounded corners to elements!*/
+  /*have four elements */
   border-radius: 50%;
 }
