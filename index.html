@@ -1,24 +1,47 @@
 <html>
+
     <head>
         <link rel="stylesheet" type="text/css" href="./styles.css">
     </head>
+
     <body>
+    <button style="font-size: 1.5em">
+        <a href="https://github.com/mhernandez77/mhernandez77.github.io">Return to Home Page</a>
+    </button>
 <!--   1st div container via DOM-->
         <div class="eyes">
             <!--               First div inside 1st DOM-->
             <div class="eye">
 <!--                Second div inside 1st DOM-->
-                <div class="ball">
+                <div class="ball"></div>
+                </div>
 <!--             Third div container via DOM-->
             <div class="eye">
 <!--                Fourth div inside the 2nd DOM-->
-                <div class="ball">
+                <div class="ball"></div>
                 </div>
                 </div>
-                </div>
+                </body>
 <!--Closing tag of fourth div & the closing tag for container div-->
-            </div></div>
 
-        <script src="./eyes.js"></script>
-    </body>
+<!--        <script src="./eyes.js"></script>-->
+
+    <script>
+        var balls = document.getElementsByClassName("ball");
+        document.onmousemove = () => {
+            var x = (event.clientX * 100) / window.innerWidth + "%";
+            var y = (event.clientY * 100) / window.innerHeight + "%";
+            //event.clientX => get the horizontal coordinate of the mouse
+            //event.clientY => get the vertical coordinte of the mouse
+            //window.innerWidth => get the browser width
+            //window.innerHeight => get the browser height
+
+            for (let i = 0; i < 2; i++) {
+                balls[i].style.left = x;
+                balls[i].style.top = y;
+                balls[i].transfoorm = "translate(-" + x + ",-" + y + ")";
+            }
+        };
+    </script>
+
 </html>
